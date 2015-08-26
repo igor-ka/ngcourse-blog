@@ -20,7 +20,7 @@ In summary, component is an object that structures and represents a UI element. 
 
 Angular 2 is written in TypeScript, and even though using is is not a requirement as the framework can be used with ES5 and ES6, the syntaxt and the development tools that use TypeScript really does make Angular 2 shine.
 
-TypeScript is an application scale language that fully aligns with the ECMA specification and provides a super set of it features. The nature of the language allows for a great IDE support with Visual Code, Atom and Sublime, and awesome compile time error checking.
+TypeScript is an application scale language that fully aligns with the ECMA specification and provides a super set of it's features. The nature of the language allows for a great IDE support with Visual Code, Atom and Sublime, and awesome compile time error checking.
 
 ## Example
 
@@ -43,15 +43,13 @@ class NgcAppComponent {
 angular.module('ngcourse', []) 
   .directive(
     'ngcApp', 
-    function () {
-      return {
-        restrict: 'E',
-        controllerAs: 'ctrl',
-        bindToController: {},
-        controller: NgcAppComponent,
-        template: NgcAppComponent.template
-      };
-    });
+    () => ({
+      restrict: 'E',
+      controllerAs: 'ctrl',
+      bindToController: {},
+      controller: NgcAppComponent,
+      template: NgcAppComponent.template
+    }));
 
 angular.element(document).ready(function() {
   angular.bootstrap(document, ['ngcourse']);
