@@ -18,7 +18,7 @@ In summary, component is an object that structures and represents a UI element. 
 
 ## Use TypeScript
 
-Angular 2 is written in TypeScript, and even though using is is not a requirement as the framework can be used with ES5 and ES6, the syntaxt and the development tools that use TypeScript really does make Angular 2 shine.
+Angular 2 is written in TypeScript, and even though using is not a requirement as the framework can be used with ES5 and ES6, the syntax and the development tools that use TypeScript really does make Angular 2 shine.
 
 TypeScript is an application scale language that fully aligns with the ECMA specification and provides a super set of it's features. The nature of the language allows for a great IDE support with Visual Code, Atom and Sublime, and awesome compile time error checking.
 
@@ -80,6 +80,8 @@ Let's compile our *app.ts* using the standard compiler for typescript `tsc` and 
 
 ## Conclusions
 
-There are many more things we can do to align our code with Angular 2  syntactically, structurally and conceptually. We can easily implement utility function or decorators for component definitions, dependency injections, break our code into ES6 modules, write unit-test using Type Script etc. but this is a good starting point. 
+There are many more things we can do to align our code with Angular 2  syntactically, structurally and conceptually. We can easily implement utility function or decorators for component definitions, dependency injection, break our code into ES6 modules, write unit-test using Type Script etc. but this is a good starting point. 
+
+This blog post is a starting point in a series of our thoughts at Rangle for a practical application architecture that will allow for an smooth transition to Angular 2. Make sure to check out page for future posts.
 
 Want to learn more advanced transition ready strategies for your applications, make sure to checkout our transitional architecture course! [need link here]
