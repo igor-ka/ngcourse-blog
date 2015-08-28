@@ -1,6 +1,6 @@
-# Introduction
+# Creating Angular 2 Style Components Using Angular 1: Part I
 
-As Angular 2 is looming over the horizon and everyone is getting excited an important topic comes up in the mind of many developers in the industry. What can we do today to align our existing applications or write new ones using Angular 1.x to ensure an easier transition to Angular 2 when it comes out.
+As Angular 2 is looming over the horizon and everyone is getting excited, an important topic comes up in the mind of many developers in the industry. What can we do today to align our existing applications or write new ones using Angular 1.x to ensure an easier transition, and minimize to minimize refactoring to Angular 2 when it comes out. After all no one wants to write an application today to be absolete next year.
 
 Using Angular 2 for production grade application today is not practical. The API of the framework is changing frequently and not all of the framework's concepts are fully implemented or documented.
 
@@ -82,6 +82,8 @@ Let's compile our *app.ts* using the standard compiler for typescript `tsc` and 
 
 There are many more things we can do to align our code with Angular 2  syntactically, structurally and conceptually. We can easily implement utility function or decorators for component definitions, dependency injection, break our code into ES6 modules, write unit-test using Type Script etc. but this is a good starting point. 
 
-This blog post is a starting point in a series of our thoughts at Rangle for a practical application architecture that will allow for an smooth transition to Angular 2. Make sure to check out page for future posts.
+This blog post is a starting point in a series of our thoughts at Rangle for a practical application architecture that will allow for an smooth transition to Angular 2. 
+
+Stay tuned for the Part II of this post to see how we can bring the structure of our Angular 1 component even more in line with Angular 2, and simplify our transition when the time comes.
 
 Want to learn more advanced transition ready strategies for your applications, make sure to checkout our transitional architecture course! [need link here]
