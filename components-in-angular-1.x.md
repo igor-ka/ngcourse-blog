@@ -18,7 +18,7 @@ Angular 2's components are conceptually similar to component directives from Ang
 
 In summary, a component is an object that structures and represents a UI element. It consists of two parts, component controller in charge of view logic and component template representing the view. 
 
-It is also worth noting that there is no `$scope` or `$watch` in Angular 2, so you should avoid them like fire. The good news is that if you were following the best practices and style guides, you should already on the right track.
+It is also worth noting that there is no `$scope` or `$watch` in Angular 2, so you should avoid them like fire. The good news is that if you were following the best practices and style guides, you should be on the right track.
 
 ### Why Components?
 
@@ -38,7 +38,7 @@ TypeScript is an application scale language that fully aligns with the ECMA spec
 
 With the explanation above out of the way, let's look at a simple example of how we could architect our application today to align with the structure of Angular 2 components more closely. 
 
-We will build a simple "Hello World" component using TypeScript, which is the only component in this example and is the root of our application. Our *app.ts*will look as follows.
+We will build a simple "Hello World" component using TypeScript, which is the only component in this example and is the root of our application. Our *app.ts* will look as follows.
 
 ```javascript
   /// <reference path="typings/angularjs/angular.d.ts" />
@@ -74,7 +74,7 @@ In case you are wondering about `Inject`, `makeDirective` and `makeSelector`, th
   /// <reference path="typings/angularjs/angular.d.ts" />
 
   export function Inject(injectable) {
-    return function(prototype, method, argumentPosition) {
+    return (prototype, method, argumentPosition) => {
       prototype.$inject = prototype.$inject || [];
       prototype.$inject[argumentPosition] = injectable;
     };
@@ -83,7 +83,7 @@ In case you are wondering about `Inject`, `makeDirective` and `makeSelector`, th
   export function makeDirective(component) {
     return () => {
 
-      var ddo = {
+      let ddo = {
         restrict: 'E',
         scope: {},
         controllerAs: 'ctrl',
@@ -112,14 +112,14 @@ In case you are wondering about `Inject`, `makeDirective` and `makeSelector`, th
   }
 
   export function makeSelector(component) {
-    return component.selector.replace(/-([a-z])/g,
-      function(g) {
-        return g[1].toUpperCase();
-      });
+    return component.selector.replace(
+      /-([a-z])/g,
+      (g) => g[1].toUpperCase()
+    );
   }
 ```
 
-**Note:** *There are other projects out ther that provide similar functionality (and more) as our utils functions [a angular2-now](https://github.com/pbastowski/angular2-now) is a good example. However, we believe that the most important aspect is the structure of our code as opposed to direct mapping of a syntax since we will have to make changes either way.*
+**Note:** *There are other projects out ther that provide similar functionality (and more) as our utils functions [a angular2-now](https://github.com/pbastowski/angular2-now) is a good example. However, we believe that the most important aspect is the structure of our code as opposed to direct mapping of a syntax since we will have to make changes either way. Also, Angular 1.5 is expected to be release with a component helper and a component base router to simplify transition conceptially.*
 
 and finally our index.html
 
