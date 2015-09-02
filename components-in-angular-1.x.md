@@ -153,3 +153,9 @@ This blog post is a starting point in a series of our thoughts at Rangle for a p
 Stay tuned for the Part II of this post for a more in-depth explanation of our approach. In the next part we will focus on an example of a simple component tree, and talk about different component types.
 
 Want to learn more advanced transition ready strategies for your applications, make sure to checkout our transitional architecture course! [need link here]
+
+[6 Gulp Best Practices You Can Use Today to Radically Improve Your Development Experience](http://blog.rangle.io/angular-gulp-bestpractices/)
+
+[How to Write Angular 2 Style Unit Tests with Angular 1.X Code](http://blog.rangle.io/unittests/). 
+
+[Write Your Angular 1.x Applications in an Angular 2 Style](http://blog.rangle.io/write-angular-2-style-code-now-typescript-decorators-components-and-flux-for-angular-1-x-applications/)
