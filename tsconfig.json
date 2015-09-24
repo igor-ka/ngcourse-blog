@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "amd",
+    "target": "es5",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "outDir": "output/js/"
+  },
+  "files": [
+    
+    "source/typings/tsd.d.ts",
+    
+    "source/ts/app.ts",
+    "source/ts/utils.ts",
+    "source/ts/components/message-component.ts",
+    "source/ts/components/main-component.ts"
+    
+  ]
+}

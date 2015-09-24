@@ -1,0 +1,21 @@
+{
+  "name": "ngcourse-blog",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "postinstall": "tsd install&& tsd link"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.8.2",
+    "del": "^1.2.1",
+    "gulp": "^3.9.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-tslint": "^3.2.0",
+    "gulp-typescript": "^2.8.2",
+    "tsd": "^0.6.4",
+    "typescript": "^1.6.2"
+  }
+}
