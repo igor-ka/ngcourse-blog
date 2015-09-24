@@ -18,7 +18,7 @@ export class NgcAppComponent {
   private message: String;
   
   constructor(@Inject('$log') private $log: angular.ILogService) {
-    this.$log.info('Hello Component!');
+    this.$log.info('NgcAppComponent');
     this.messages = new Array<String>();
     this.message = '';
   }

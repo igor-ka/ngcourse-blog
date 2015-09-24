@@ -19,7 +19,7 @@ export class NgcMessageComponent {
   private onShowMessageEvent: Function;
 
   constructor(@Inject('$log') private $log: angular.ILogService) {
-    this.$log.info(':NgcMessageComponent:');
+    this.$log.info('NgcMessageComponent');
   }
   
   onMessageButtonClick() {

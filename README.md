@@ -1,4 +1,4 @@
-# Sample TS Repository to support this blog
+# Sample TS Repository for Components Blog
 
 ## Building instruction
 
