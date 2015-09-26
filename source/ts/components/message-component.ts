@@ -20,12 +20,11 @@ export class NgcMessageComponent {
 
   constructor(@Inject('$log') private $log: angular.ILogService) {
     this.$log.info('NgcMessageComponent');
-    this.message = this.message.toUpperCase();
   }
   
   onMessageButtonClick() {
     this.onShowMessageEvent({
-      message: this.message
+      data: this.message.toUpperCase()
     });
   }
 }

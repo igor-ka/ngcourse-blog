@@ -1,4 +1,4 @@
-# Creating Angular 2 Style Components Using Angular 1: Part I
+# Creating Angular 2 Style Components Using Angular 1 (Part I)
 
 As Angular 2 looms in the horizon, it is easy to be overwhelmed by the upcoming transition. An important topic emerging for many developers is how to align existing applications, or write new ones, using Angular 1.x to ensure the transition is smooth, and to minimize refactoring when Angular 2 comes out. After all no one wants to write an application today that will be obsolete in a year.
 
@@ -10,7 +10,7 @@ A more pragmatic approach is to develop applications using Angular 1.x with Angu
 
 ## Structure your Application as a Tree of Components
 
-Angular 2 is all about components and the two aspects worth discussing brienfly are the "whats" and the "whys".
+Angular 2 is all about components and the two aspects worth discussing briefly are the "whats" and the "whys".
 
 ### What is a Component in Angular 2.0?
 
@@ -22,15 +22,15 @@ It is also worth noting that there is no `$scope` or `$watch` in Angular 2, so y
 
 ### Why Components?
 
-One of the ways to conceptualize Angular 1.x application is to view it as graph of scopes. Couple that with bi-directional data flow among those scopes and you have a complex application structure that is hard for developers to reason about. In addition, this approach poses perfromance challenges on the framework, maintaining the bindings within this graph during the digest cycles is more complicated and performance intensive as comprated to a tree of components.
+One of the ways to conceptualize Angular 1.x application is to view it as a graph of scopes. Couple that with bi-directional data flow amongst these scopes and you have a complex application structure that is hard for developers to reason about. In addition, this approach poses performance challenges on the framework. Maintaining the bindings within this graph during the digest cycles is more complicated and performance intensive compared to a tree of components.
 
-An Angular 1.x application developer also had to face a constant dillema of what to use to add logic to the page in the form of directives vs. controllers. The choice becomes a lot simpler in Angular 2, components to add add logic with a view, and directive to add custom behaviour to existing elements.
+An Angular 1.x application developer also had to face the constant dillema of what to use to add logic to the page in the form of directives vs. controllers. The choice becomes a lot simpler in Angular 2: components to add logic with a view, and directive to add custom behaviour to existing elements.
 
 Finally, the push to component based architecture aligns the framework with the future Web Component standards, which hopefully will extend the relevant life span of the framework and allow for less breaking changes in future releases.
 
 ## Develop with TypeScript
 
-Angular 2 is written in TypeScript, and even though using is not a requirement as the framework can be used with ES5 and ES6, the syntax and the development tools that use TypeScript make Angular 2 development workflow shine.
+Angular 2 is written in TypeScript, and even though using it is not a requirement as the framework can be used with ES5 and ES6, the syntax and the development tools that use TypeScript make Angular 2 development workflow shine.
 
 TypeScript is an application scale language that fully aligns with the ECMA specification and provides a super set of it's features. The nature of the language allows for a great IDE support with Visual Code, Atom and Sublime, and awesome compile time error checking.
 
@@ -38,7 +38,9 @@ TypeScript is an application scale language that fully aligns with the ECMA spec
 
 With the explanation above out of the way, let's look at a simple example of how we could architect our application today to align with the structure of Angular 2 components more closely. 
 
-We will build a simple "Hello World" component using TypeScript, which is the only component in this example and is the root of our application. Our *app.ts* will look as follows.
+We will build a simple "Hello World" component using TypeScript, which is the only component in this example and is the root of our application. 
+
+Our *app.ts* will look as follows.
 
 ```javascript
   /// <reference path="typings/angularjs/angular.d.ts" />
@@ -68,7 +70,7 @@ We will build a simple "Hello World" component using TypeScript, which is the on
   });
 ```
 
-In case you are wondering about `Inject`, `makeDirective` and `makeSelector`, they are just utility function we implemented to have a similar structure to Angular 2 application. There is nothing magical about them and the code for *utils.ts* is provided below for reference:
+In case you are wondering about `Inject`, `makeDirective` and `makeSelector`, they are utility functions we implemented to create a similar structure to Angular 2. There is nothing magical about them and the code for *utils.ts* is provided below for reference:
 
 ```javascript
   /// <reference path="typings/angularjs/angular.d.ts" />
@@ -119,7 +121,7 @@ In case you are wondering about `Inject`, `makeDirective` and `makeSelector`, th
   }
 ```
 
-**Note:** *There are other projects out ther that provide similar functionality (and more) as our utils functions [a angular2-now](https://github.com/pbastowski/angular2-now) is a good example. However, we believe that the most important aspect is the structure of our code as opposed to direct mapping of a syntax since we will have to make changes either way. Also, Angular 1.5 is expected to be release with a component helper and a component base router to simplify transition conceptially.*
+**Note:** *There are other projects out ther that provide similar functionality (and more) as our utils functions [a angular2-now](https://github.com/pbastowski/angular2-now) is a good example. However, we believe that the most important aspect is the structure of our code, as opposed to direct mapping of a syntax, since we will have to make changes either way. Also, Angular 1.5 is expected to be released with a component helper and a component base router to simplify transition conceptually.*
 
 and finally our index.html
 
@@ -146,16 +148,19 @@ Let's compile our *app.ts* using the standard compiler for typescript `tsc app.t
 
 ## Conclusions
 
-There are many more things we can do to align our code with Angular 2  syntactically, structurally and conceptually.
+There are many things we can do to align our code with Angular 2  syntactically, structurally and conceptually.
 
-This blog post is a starting point in a series of our thoughts at Rangle for a practical application architecture that will allow for an smooth transition to Angular 2. 
+This blog post is one of the starting points in a series of our thoughts at Rangle for a practical application architecture that will allow for a smooth transition to Angular 2. 
 
-Stay tuned for the Part II of this post for a more in-depth explanation of our approach. In the next part we will focus on an example of a simple component tree, and talk about different component types.
+Stay tuned for Part II of this post for a more in-depth explanation of our approach. In part II we will focus on an example of a simple component tree, and talk about different component types.
 
-Want to learn more advanced transition ready strategies for your applications, make sure to checkout our transitional architecture course! [need link here]
+For more advanced transition ready strategies for your applications, make sure you sign up for our **[transitional architecture course!](http://rangle.io/services/javascript-training/)**
 
-[6 Gulp Best Practices You Can Use Today to Radically Improve Your Development Experience](http://blog.rangle.io/angular-gulp-bestpractices/)
 
-[How to Write Angular 2 Style Unit Tests with Angular 1.X Code](http://blog.rangle.io/unittests/). 
+Here are some additional blog posts in our series on the Angular 2 transition:
 
-[Write Your Angular 1.x Applications in an Angular 2 Style](http://blog.rangle.io/write-angular-2-style-code-now-typescript-decorators-components-and-flux-for-angular-1-x-applications/)
+*[6 Gulp Best Practices You Can Use Today to Radically Improve Your Development Experience](http://blog.rangle.io/angular-gulp-bestpractices/)*
+
+*[How to Write Angular 2 Style Unit Tests with Angular 1.X Code](http://blog.rangle.io/unittests/).* 
+
+*[Write Your Angular 1.x Applications in an Angular 2 Style](http://blog.rangle.io/write-angular-2-style-code-now-typescript-decorators-components-and-flux-for-angular-1-x-applications/)* 

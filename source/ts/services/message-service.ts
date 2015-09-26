@@ -5,8 +5,8 @@ export class NgcMessageService {
   private _messages: Array<String>;
   
   constructor(@Inject('$log') private $log: angular.ILogService) {
-    this.$log.info('NgcMessageService');
     
+    this.$log.info('NgcMessageService');
     this._messages = new Array<String>();
   }
   

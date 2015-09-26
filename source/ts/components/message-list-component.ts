@@ -11,7 +11,7 @@ export class NgcMessageListComponent {
     </form>
     <ngc-message ng-repeat="message in ctrl.messages"
       message="message" 
-      on-show-message-event="ctrl.alertMessage(message)">
+      on-show-message-event="ctrl.alertMessage(data)">
     </ngc-mesage>  
     `;
 
@@ -33,7 +33,7 @@ export class NgcMessageListComponent {
     this.message = '';  
   }
   
-  alertMessage(message) {
-    alert('The message is: ' + message);
+  alertMessage(data) {
+    alert('The message is: ' + data);
   }
 }
