@@ -1,17 +1,16 @@
-/// <reference path="../typings/angularjs/angular.d.ts" />
-
 import {makeDirective, makeSelector} from './utils';
-import {NgcAppComponent} from './components/main-component';
+import {NgcMessageListComponent} from './components/message-list-component';
 import {NgcMessageComponent} from './components/message-component';
-
+import {NgcMessageService} from './services/message-service';
 
 angular.module('ngcourse', []) 
   .directive(
-    makeSelector(NgcAppComponent), 
-    makeDirective(NgcAppComponent))
+    makeSelector(NgcMessageListComponent), 
+    makeDirective(NgcMessageListComponent))
   .directive(
     makeSelector(NgcMessageComponent), 
-    makeDirective(NgcMessageComponent));
+    makeDirective(NgcMessageComponent))
+  .service('ngcMessageService', NgcMessageService);
 
 angular.element(document).ready(function() {
   angular.bootstrap(document, ['ngcourse']);

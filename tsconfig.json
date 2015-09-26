@@ -15,7 +15,8 @@
     "source/ts/app.ts",
     "source/ts/utils.ts",
     "source/ts/components/message-component.ts",
-    "source/ts/components/main-component.ts"
+    "source/ts/components/message-list-component.ts",
+    "source/ts/services/message-service.ts"
     
   ]
 }
