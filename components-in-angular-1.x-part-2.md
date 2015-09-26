@@ -11,7 +11,9 @@ Web Component standards aim to allow for creation of re-usable and interoperable
 
 To get a better understanding of those ideas, let's start with a simple example of an existing HTML element.
 
-`<input type="text" value="Kill Bill" onblur="someFunction()"/>`
+```html
+<input type="text" value="Kill Bill" onblur="someFunction()"/>
+```
 
 If we ignore the implicit simplicity of the markup above and look at it from a Web Component perspective, we can see some properties emerging.
 
@@ -19,7 +21,9 @@ First, this component can accept some inputs via the `type` and `value` attribut
 
 Now, wouldn't it be cool if we could extend the DOM and define our own custom, re-usable elements?
 
-`<my-cool-component cool-data="someData" on-cool-event="someCallback(dataOut)"/>`
+```html
+<my-cool-component cool-data="someData" on-cool-event="someCallback(dataOut)"/>
+```
 
 Now, I am not surprised if you are not impressed. Directives in Angular 1.x were doing this all along for Angular applications with [Ionic](http://ionicframework.com/) as the prime example of using those ideas to a great effect. Also, [Polymer](https://www.polymer-project.org/1.0/) is emerging as an interoperable option, especially popular with "designer types".
 
@@ -34,7 +38,7 @@ We will implement 2 components, a `<ncg-message-list/>` top level component talk
 
 Let's start with our `<ngc-message>` component which will accept a message be rendered, and will fire an event to return an upper case version of the message. This is the API of this little component defining it's inputs and outputs.
 
-```
+```javascript
 import {Inject} from '../utils';
 
 export class NgcMessageComponent {
@@ -69,7 +73,7 @@ export class NgcMessageComponent {
 
 Now lets define our top level component `<ncg-message-list>`. This component will iterate over the messages it gets from an injected service and pass them in as data into the `<ncg-message>` component. This component will also respond to an event emitted by the `<ncg-message>` with an alert of the message (the data) passed out of this component.
 
-```
+```javascript
 import {Inject} from '../utils';
 import {NgcMessageService} from '../services/message-service';
 
@@ -113,7 +117,7 @@ export class NgcMessageListComponent {
 
 Finally, here is our message service:
 
-```
+```javascript
 import {Inject} from '../utils';
 
 export class NgcMessageService {
